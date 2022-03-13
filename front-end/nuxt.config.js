@@ -15,6 +15,12 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
+  // Axios module configuration: https://go.nuxtjs.dev/config-axios
+
+  axios: {
+    baseURL: 'https://localhost:7187/api',
+    timeout: 30000
+  },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
@@ -37,5 +43,11 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+  },
+  cloudinary: {
+    cloudName: 'thangdao04',
+    apiKey: '787768913945176', //only needed if you are using server-side upload
+    apiSecret: 'yC0bQkMU2N5C6HLpkAVFqjWx4Pc', //only needed if you are using server-side upload
+    useComponent: true //use Vue components
   }
 }

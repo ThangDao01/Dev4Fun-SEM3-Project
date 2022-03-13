@@ -1,12 +1,343 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="f5afdfcc-21e8-425c-b33d-fdec1671b59a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../front-end/layouts/home.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../front-end/pages/admin/vacancies/_id.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../front-end/pages/admin/vacancies/index.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../front-end/pages/home/index.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../front-end/static/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../front-end/layouts/admin.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../front-end/pages/admin/Vancancy/create.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../front-end/pages/admin/Vancancy/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../front-end/pages/jobs/_id.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../front-end/pages/jobs/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../front-end/pages/jobs/job-grid-with-filters.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/temp_html.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/.vs/Dev4Fun-SEM3-Project/DesignTimeBuild/.dtbcache.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/.vs/Dev4Fun-SEM3-Project/project-colors.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/.vs/Dev4Fun-SEM3-Project/v17/.futdcache.v1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/.vs/Dev4Fun-SEM3-Project/v17/.suo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project.sln" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/Controllers/ApplicantVacanciesController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/Controllers/ApplicantsController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/Controllers/DepartmentsController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/Controllers/UsersController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/Controllers/VacanciesController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/Controllers/WeatherForecastController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/Data/Dev4Fun_SEM3_ProjectContext.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/Dev4Fun-SEM3-Project.csproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/Models/ApplicantVacancy.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/Models/Applicants.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/Models/Departments.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/Models/Users.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/Models/Vacancies.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/Program.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/Properties/launchSettings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/Properties/serviceDependencies.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/Properties/serviceDependencies.local.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/WeatherForecast.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/appsettings.Development.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/appsettings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/Dev4Fun-SEM3-Project.deps.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/Dev4Fun-SEM3-Project.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/Dev4Fun-SEM3-Project.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/Dev4Fun-SEM3-Project.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/Dev4Fun-SEM3-Project.runtimeconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/Humanizer.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/MessagePack.Annotations.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/MessagePack.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/Microsoft.AspNetCore.Razor.Language.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/Microsoft.Bcl.AsyncInterfaces.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/Microsoft.Build.Locator.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/Microsoft.CodeAnalysis.AnalyzerUtilities.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/Microsoft.CodeAnalysis.CSharp.Features.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/Microsoft.CodeAnalysis.CSharp.Scripting.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/Microsoft.CodeAnalysis.CSharp.Workspaces.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/Microsoft.CodeAnalysis.CSharp.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/Microsoft.CodeAnalysis.Features.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/Microsoft.CodeAnalysis.Razor.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/Microsoft.CodeAnalysis.Scripting.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/Microsoft.CodeAnalysis.VisualBasic.Features.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/Microsoft.CodeAnalysis.VisualBasic.Workspaces.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/Microsoft.CodeAnalysis.VisualBasic.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/Microsoft.CodeAnalysis.Workspaces.MSBuild.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/Microsoft.CodeAnalysis.Workspaces.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/Microsoft.CodeAnalysis.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/Microsoft.Data.SqlClient.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/Microsoft.DiaSymReader.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/Microsoft.DotNet.Scaffolding.Shared.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.Abstractions.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.Design.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.Relational.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.SqlServer.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/Microsoft.Extensions.Caching.Abstractions.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/Microsoft.Extensions.Caching.Memory.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/Microsoft.Extensions.Configuration.Abstractions.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/Microsoft.Extensions.DependencyInjection.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/Microsoft.Extensions.Logging.Abstractions.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/Microsoft.Extensions.Logging.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/Microsoft.Extensions.Options.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/Microsoft.Extensions.Primitives.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/Microsoft.Identity.Client.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/Microsoft.IdentityModel.JsonWebTokens.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/Microsoft.IdentityModel.Logging.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/Microsoft.IdentityModel.Protocols.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/Microsoft.IdentityModel.Tokens.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/Microsoft.OpenApi.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/Microsoft.VisualStudio.Debugger.Contracts.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/Microsoft.VisualStudio.Web.CodeGeneration.Core.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/Microsoft.VisualStudio.Web.CodeGeneration.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/Microsoft.Win32.SystemEvents.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/Newtonsoft.Json.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/NuGet.Common.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/NuGet.Configuration.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/NuGet.DependencyResolver.Core.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/NuGet.Frameworks.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/NuGet.LibraryModel.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/NuGet.Packaging.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/NuGet.ProjectModel.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/NuGet.Protocol.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/NuGet.Versioning.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/Swashbuckle.AspNetCore.Swagger.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/Swashbuckle.AspNetCore.SwaggerGen.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/Swashbuckle.AspNetCore.SwaggerUI.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/System.Collections.Immutable.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/System.Composition.AttributedModel.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/System.Composition.Convention.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/System.Composition.Hosting.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/System.Composition.Runtime.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/System.Composition.TypedParts.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/System.Configuration.ConfigurationManager.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/System.Diagnostics.DiagnosticSource.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/System.Drawing.Common.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/System.IdentityModel.Tokens.Jwt.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/System.Runtime.Caching.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/System.Runtime.CompilerServices.Unsafe.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/System.Security.Cryptography.ProtectedData.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/System.Security.Permissions.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/System.Windows.Extensions.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/appsettings.Development.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/appsettings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/cs/Microsoft.CodeAnalysis.CSharp.Features.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/cs/Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/cs/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/cs/Microsoft.CodeAnalysis.CSharp.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/cs/Microsoft.CodeAnalysis.Features.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/cs/Microsoft.CodeAnalysis.Scripting.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/cs/Microsoft.CodeAnalysis.VisualBasic.Features.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/cs/Microsoft.CodeAnalysis.VisualBasic.Workspaces.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/cs/Microsoft.CodeAnalysis.VisualBasic.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/cs/Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/cs/Microsoft.CodeAnalysis.Workspaces.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/cs/Microsoft.CodeAnalysis.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/de/Microsoft.CodeAnalysis.CSharp.Features.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/de/Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/de/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/de/Microsoft.CodeAnalysis.CSharp.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/de/Microsoft.CodeAnalysis.Features.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/de/Microsoft.CodeAnalysis.Scripting.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/de/Microsoft.CodeAnalysis.VisualBasic.Features.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/de/Microsoft.CodeAnalysis.VisualBasic.Workspaces.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/de/Microsoft.CodeAnalysis.VisualBasic.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/de/Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/de/Microsoft.CodeAnalysis.Workspaces.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/de/Microsoft.CodeAnalysis.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/dotnet-aspnet-codegenerator-design.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/es/Microsoft.CodeAnalysis.CSharp.Features.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/es/Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/es/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/es/Microsoft.CodeAnalysis.CSharp.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/es/Microsoft.CodeAnalysis.Features.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/es/Microsoft.CodeAnalysis.Scripting.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/es/Microsoft.CodeAnalysis.VisualBasic.Features.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/es/Microsoft.CodeAnalysis.VisualBasic.Workspaces.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/es/Microsoft.CodeAnalysis.VisualBasic.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/es/Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/es/Microsoft.CodeAnalysis.Workspaces.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/es/Microsoft.CodeAnalysis.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/fr/Microsoft.CodeAnalysis.CSharp.Features.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/fr/Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/fr/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/fr/Microsoft.CodeAnalysis.CSharp.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/fr/Microsoft.CodeAnalysis.Features.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/fr/Microsoft.CodeAnalysis.Scripting.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/fr/Microsoft.CodeAnalysis.VisualBasic.Features.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/fr/Microsoft.CodeAnalysis.VisualBasic.Workspaces.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/fr/Microsoft.CodeAnalysis.VisualBasic.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/fr/Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/fr/Microsoft.CodeAnalysis.Workspaces.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/fr/Microsoft.CodeAnalysis.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/it/Microsoft.CodeAnalysis.CSharp.Features.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/it/Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/it/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/it/Microsoft.CodeAnalysis.CSharp.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/it/Microsoft.CodeAnalysis.Features.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/it/Microsoft.CodeAnalysis.Scripting.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/it/Microsoft.CodeAnalysis.VisualBasic.Features.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/it/Microsoft.CodeAnalysis.VisualBasic.Workspaces.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/it/Microsoft.CodeAnalysis.VisualBasic.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/it/Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/it/Microsoft.CodeAnalysis.Workspaces.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/it/Microsoft.CodeAnalysis.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/ja/Microsoft.CodeAnalysis.CSharp.Features.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/ja/Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/ja/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/ja/Microsoft.CodeAnalysis.CSharp.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/ja/Microsoft.CodeAnalysis.Features.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/ja/Microsoft.CodeAnalysis.Scripting.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/ja/Microsoft.CodeAnalysis.VisualBasic.Features.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/ja/Microsoft.CodeAnalysis.VisualBasic.Workspaces.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/ja/Microsoft.CodeAnalysis.VisualBasic.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/ja/Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/ja/Microsoft.CodeAnalysis.Workspaces.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/ja/Microsoft.CodeAnalysis.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/ko/Microsoft.CodeAnalysis.CSharp.Features.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/ko/Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/ko/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/ko/Microsoft.CodeAnalysis.CSharp.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/ko/Microsoft.CodeAnalysis.Features.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/ko/Microsoft.CodeAnalysis.Scripting.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/ko/Microsoft.CodeAnalysis.VisualBasic.Features.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/ko/Microsoft.CodeAnalysis.VisualBasic.Workspaces.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/ko/Microsoft.CodeAnalysis.VisualBasic.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/ko/Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/ko/Microsoft.CodeAnalysis.Workspaces.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/ko/Microsoft.CodeAnalysis.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/pl/Microsoft.CodeAnalysis.CSharp.Features.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/pl/Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/pl/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/pl/Microsoft.CodeAnalysis.CSharp.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/pl/Microsoft.CodeAnalysis.Features.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/pl/Microsoft.CodeAnalysis.Scripting.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/pl/Microsoft.CodeAnalysis.VisualBasic.Features.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/pl/Microsoft.CodeAnalysis.VisualBasic.Workspaces.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/pl/Microsoft.CodeAnalysis.VisualBasic.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/pl/Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/pl/Microsoft.CodeAnalysis.Workspaces.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/pl/Microsoft.CodeAnalysis.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/pt-BR/Microsoft.CodeAnalysis.CSharp.Features.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/pt-BR/Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/pt-BR/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/pt-BR/Microsoft.CodeAnalysis.CSharp.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/pt-BR/Microsoft.CodeAnalysis.Features.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/pt-BR/Microsoft.CodeAnalysis.Scripting.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/pt-BR/Microsoft.CodeAnalysis.VisualBasic.Features.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/pt-BR/Microsoft.CodeAnalysis.VisualBasic.Workspaces.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/pt-BR/Microsoft.CodeAnalysis.VisualBasic.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/pt-BR/Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/pt-BR/Microsoft.CodeAnalysis.Workspaces.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/pt-BR/Microsoft.CodeAnalysis.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/ref/Dev4Fun-SEM3-Project.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/ru/Microsoft.CodeAnalysis.CSharp.Features.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/ru/Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/ru/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/ru/Microsoft.CodeAnalysis.CSharp.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/ru/Microsoft.CodeAnalysis.Features.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/ru/Microsoft.CodeAnalysis.Scripting.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/ru/Microsoft.CodeAnalysis.VisualBasic.Features.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/ru/Microsoft.CodeAnalysis.VisualBasic.Workspaces.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/ru/Microsoft.CodeAnalysis.VisualBasic.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/ru/Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/ru/Microsoft.CodeAnalysis.Workspaces.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/ru/Microsoft.CodeAnalysis.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/runtimes/unix/lib/netcoreapp3.0/System.Drawing.Common.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/runtimes/unix/lib/netcoreapp3.1/Microsoft.Data.SqlClient.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/runtimes/win-arm/lib/net6.0/dotnet-aspnet-codegenerator-design.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/runtimes/win-arm/native/Microsoft.Data.SqlClient.SNI.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/runtimes/win-arm64/lib/net6.0/dotnet-aspnet-codegenerator-design.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/runtimes/win-arm64/native/Microsoft.Data.SqlClient.SNI.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/runtimes/win-x64/native/Microsoft.Data.SqlClient.SNI.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/runtimes/win-x86/native/Microsoft.Data.SqlClient.SNI.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/runtimes/win/lib/netcoreapp3.0/Microsoft.Win32.SystemEvents.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/runtimes/win/lib/netcoreapp3.0/System.Drawing.Common.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/runtimes/win/lib/netcoreapp3.0/System.Windows.Extensions.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/runtimes/win/lib/netcoreapp3.1/Microsoft.Data.SqlClient.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/runtimes/win/lib/netstandard2.0/System.Runtime.Caching.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/tr/Microsoft.CodeAnalysis.CSharp.Features.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/tr/Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/tr/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/tr/Microsoft.CodeAnalysis.CSharp.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/tr/Microsoft.CodeAnalysis.Features.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/tr/Microsoft.CodeAnalysis.Scripting.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/tr/Microsoft.CodeAnalysis.VisualBasic.Features.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/tr/Microsoft.CodeAnalysis.VisualBasic.Workspaces.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/tr/Microsoft.CodeAnalysis.VisualBasic.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/tr/Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/tr/Microsoft.CodeAnalysis.Workspaces.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/tr/Microsoft.CodeAnalysis.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/zh-Hans/Microsoft.CodeAnalysis.CSharp.Features.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/zh-Hans/Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/zh-Hans/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/zh-Hans/Microsoft.CodeAnalysis.CSharp.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/zh-Hans/Microsoft.CodeAnalysis.Features.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/zh-Hans/Microsoft.CodeAnalysis.Scripting.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/zh-Hans/Microsoft.CodeAnalysis.VisualBasic.Features.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/zh-Hans/Microsoft.CodeAnalysis.VisualBasic.Workspaces.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/zh-Hans/Microsoft.CodeAnalysis.VisualBasic.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/zh-Hans/Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/zh-Hans/Microsoft.CodeAnalysis.Workspaces.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/zh-Hans/Microsoft.CodeAnalysis.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/zh-Hant/Microsoft.CodeAnalysis.CSharp.Features.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/zh-Hant/Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/zh-Hant/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/zh-Hant/Microsoft.CodeAnalysis.CSharp.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/zh-Hant/Microsoft.CodeAnalysis.Features.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/zh-Hant/Microsoft.CodeAnalysis.Scripting.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/zh-Hant/Microsoft.CodeAnalysis.VisualBasic.Features.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/zh-Hant/Microsoft.CodeAnalysis.VisualBasic.Workspaces.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/zh-Hant/Microsoft.CodeAnalysis.VisualBasic.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/zh-Hant/Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/zh-Hant/Microsoft.CodeAnalysis.Workspaces.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/bin/Debug/net6.0/zh-Hant/Microsoft.CodeAnalysis.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/obj/Debug/net6.0/.NETCoreApp,Version=v6.0.AssemblyAttributes.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/obj/Debug/net6.0/Dev4Fun-SEM3-Project.AssemblyInfo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/obj/Debug/net6.0/Dev4Fun-SEM3-Project.AssemblyInfoInputs.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/obj/Debug/net6.0/Dev4Fun-SEM3-Project.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/obj/Debug/net6.0/Dev4Fun-SEM3-Project.GlobalUsings.g.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/obj/Debug/net6.0/Dev4Fun-SEM3-Project.MvcApplicationPartsAssemblyInfo.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/obj/Debug/net6.0/Dev4Fun-SEM3-Project.MvcApplicationPartsAssemblyInfo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/obj/Debug/net6.0/Dev4Fun-SEM3-Project.assets.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/obj/Debug/net6.0/Dev4Fun-SEM3-Project.csproj.AssemblyReference.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/obj/Debug/net6.0/Dev4Fun-SEM3-Project.csproj.CopyComplete" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/obj/Debug/net6.0/Dev4Fun-SEM3-Project.csproj.CoreCompileInputs.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/obj/Debug/net6.0/Dev4Fun-SEM3-Project.csproj.FileListAbsolute.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/obj/Debug/net6.0/Dev4Fun-SEM3-Project.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/obj/Debug/net6.0/Dev4Fun-SEM3-Project.genruntimeconfig.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/obj/Debug/net6.0/Dev4Fun-SEM3-Project.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/obj/Debug/net6.0/apphost.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/obj/Debug/net6.0/ref/Dev4Fun-SEM3-Project.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/obj/Debug/net6.0/staticwebassets.build.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/obj/Dev4Fun-SEM3-Project.csproj.nuget.dgspec.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/obj/Dev4Fun-SEM3-Project.csproj.nuget.g.props" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/obj/Dev4Fun-SEM3-Project.csproj.nuget.g.targets" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/obj/project.assets.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/obj/project.nuget.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back_end/Dev4Fun-SEM3-Project/obj/staticwebassets.pack.sentinel" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front-end/layouts/home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front-end/layouts/home.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front-end/nuxt.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/../front-end/nuxt.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front-end/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../front-end/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front-end/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../front-end/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front-end/pages/admin/vacancies/_id.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front-end/pages/admin/vacancies/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front-end/pages/admin/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front-end/pages/home/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front-end/pages/home/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front-end/pages/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front-end/pages/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front-end/static/css/job-detail-four.css" beforeDir="false" afterPath="$PROJECT_DIR$/../front-end/static/css/job-detail-four.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front-end/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/../front-end/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front-end/static/images/footer-logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/../front-end/static/images/footer-logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front-end/static/images/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/../front-end/static/images/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/user_html/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_html/job-detail-four.html" beforeDir="false" afterPath="$PROJECT_DIR$/user_html/job-detail-four.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_html/job-grid-with-filters.html" beforeDir="false" afterPath="$PROJECT_DIR$/user_html/job-grid-with-filters.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,6 +346,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="25yA8q96mmtw7PyFuyFdbpQ7BnJ" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -28,6 +362,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../front-end" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -45,10 +380,34 @@
       <updated>1646488811612</updated>
       <workItem from="1646488818237" duration="691000" />
       <workItem from="1646504083013" duration="1608000" />
+      <workItem from="1646598921561" duration="1488000" />
+      <workItem from="1646603786759" duration="776000" />
+      <workItem from="1646629319406" duration="1289000" />
+      <workItem from="1646636198213" duration="906000" />
+      <workItem from="1646680881563" duration="18000" />
+      <workItem from="1646894964303" duration="2685000" />
+      <workItem from="1646917831699" duration="599000" />
+      <workItem from="1646927844422" duration="2231000" />
+      <workItem from="1646932683497" duration="1275000" />
+      <workItem from="1646973654804" duration="222000" />
+      <workItem from="1646973890280" duration="1280000" />
+      <workItem from="1647181002803" duration="1177000" />
+      <workItem from="1647184879149" duration="1356000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

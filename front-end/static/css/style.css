@@ -535,7 +535,7 @@ address {
 .careerfy-banner {
     float: left;
     width: 100%;
-    background: url(extra-images/banner-bg.jpg);
+    background: url(/extra-images/banner-bg.jpg);
     position: relative;
     padding: 138px 0px 139px 0px;
 }
@@ -915,7 +915,7 @@ li:hover .careerfy-read-more {
     float: left;
     width: 100%;
     text-align: center;
-    background: url(extra-images/subheader-bg.jpg);
+    background: url(/static/extra-images/subheader-bg.jpg);
     background-color: #1e3142;
     position: relative;
     padding: 45px 0px 87px 0px;
