@@ -3,17 +3,17 @@
     <div id="wrapper">
       <!-- Sidebar -->
       <ul class="navbar-nav sidebar sidebar-light accordion" id="accordionSidebar">
-        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/Admin/Home/index.html">
+        <NuxtLink class="sidebar-brand d-flex align-items-center justify-content-center" to="/admin">
           <div class="sidebar-brand-icon">
             <img src="/img/logo/logo2.png">
           </div>
           <div class="sidebar-brand-text mx-3">RuangAdmin</div>
-        </a>
+          </NuxtLink>     
         <hr class="sidebar-divider my-0">
         <li class="nav-item active">
-          <a class="nav-link" href="/Admin/Home/index.html">
+            <NuxtLink class="nav-link" to="/admin">
             <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>Dashboard</span></a>
+            <span>Dashboard</span></NuxtLink>
         </li>
         <li class="nav-item">
           <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseForm" aria-expanded="true"
@@ -46,13 +46,13 @@
           <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseBootstrap"
              aria-expanded="true" aria-controls="collapseBootstrap">
             <i class="far fa-fw fa-window-maximize"></i>
-            <span>Interview</span>
+            <span>ApplicantVancancy</span>
           </a>
           <div id="collapseBootstrap" class="collapse" aria-labelledby="headingBootstrap"
                data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-              <a class="collapse-item" href="/Admin/Interview/form_basics.html">Table</a>
-              <a class="collapse-item" href="/Admin/Interview/simple-tables.html">Detail</a>
+              <NuxtLink class="collapse-item" to="/admin/ApplicantVancancy">Detail</NuxtLink>
+              <NuxtLink class="collapse-item" to="/admin/ApplicantVancancy/create">Create</NuxtLink>
             </div>
           </div>
         </li>
@@ -65,8 +65,8 @@
           <div id="collapseApplicant" class="collapse" aria-labelledby="headingApplicant"
                data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-              <a class="collapse-item" href="/Admin/Applicant/form_basics.html">Table</a>
-              <a class="collapse-item" href="/Admin/Applicant/simple-tables.html">Detail</a>
+              <NuxtLink class="collapse-item" to="/admin/Applicant">Detail</NuxtLink>
+              <NuxtLink class="collapse-item" to="/admin/Applicant/create">Create</NuxtLink>
             </div>
           </div>
         </li>
@@ -79,8 +79,8 @@
           <div id="collapseDepartments" class="collapse" aria-labelledby="headingDepartments"
                data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-              <a class="collapse-item" href="/Admin/Department/form_basics.html">Table</a>
-              <a class="collapse-item" href="/Admin/Department/simple-tables.html">Detail</a>
+              <NuxtLink class="collapse-item" to="/admin/Department">Detail</NuxtLink>
+              <NuxtLink class="collapse-item" to="/admin/Department/create">Create</NuxtLink>
             </div>
           </div>
         </li>
@@ -93,8 +93,8 @@
           <div id="collapsePage" class="collapse" aria-labelledby="headingPage" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
               <h6 class="collapse-header">Example Pages</h6>
-              <a class="collapse-item" href="/Admin/Auth/login.html">Login</a>
-              <a class="collapse-item" href="/Admin/Auth/register.html">Register</a>
+              <NuxtLink class="collapse-item" to="/admin/Auth/login">login</NuxtLink>
+              <NuxtLink class="collapse-item" to="/admin/Auth/register  ">register</NuxtLink>
               <a class="collapse-item" href="/Admin/Auth/404.html">404 Page</a>
             </div>
           </div>
