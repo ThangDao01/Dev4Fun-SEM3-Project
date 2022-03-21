@@ -8,15 +8,16 @@
             <img src="/img/logo/logo2.png">
           </div>
           <div class="sidebar-brand-text mx-3">RuangAdmin</div>
-          </NuxtLink>     
+        </NuxtLink>
         <hr class="sidebar-divider my-0">
         <li class="nav-item active">
-            <NuxtLink class="nav-link" to="/admin">
+          <NuxtLink class="nav-link" to="/admin">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Dashboard</span></NuxtLink>
         </li>
         <li class="nav-item">
-          <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseForm" aria-expanded="true"
+          <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseForm"
+             aria-expanded="true"
              aria-controls="collapseForm">
             <i class="fab fa-fw fa-wpforms"></i>
             <span>Vancancy</span>
@@ -85,7 +86,8 @@
           </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePage" aria-expanded="true"
+          <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePage"
+             aria-expanded="true"
              aria-controls="collapsePage">
             <i class="fas fa-fw fa-columns"></i>
             <span>Pages</span>
@@ -111,7 +113,8 @@
             </button>
             <ul class="navbar-nav ml-auto">
               <li class="nav-item dropdown no-arrow">
-                <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown"
+                <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
+                   data-toggle="dropdown"
                    aria-haspopup="true" aria-expanded="false">
                   <i class="fas fa-search fa-fw"></i>
                 </a>
@@ -132,7 +135,8 @@
                 </div>
               </li>
               <li class="nav-item dropdown no-arrow mx-1">
-                <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown"
+                <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
+                   data-toggle="dropdown"
                    aria-haspopup="true" aria-expanded="false">
                   <i class="fas fa-bell fa-fw"></i>
                   <span class="badge badge-danger badge-counter">3+</span>
@@ -179,7 +183,8 @@
                 </div>
               </li>
               <li class="nav-item dropdown no-arrow mx-1">
-                <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown"
+                <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
+                   data-toggle="dropdown"
                    aria-haspopup="true" aria-expanded="false">
                   <i class="fas fa-envelope fa-fw"></i>
                   <span class="badge badge-warning badge-counter">2</span>
@@ -195,7 +200,8 @@
                       <div class="status-indicator bg-success"></div>
                     </div>
                     <div class="font-weight-bold">
-                      <div class="text-truncate">Hi there! I am wondering if you can help me with a problem I've been
+                      <div class="text-truncate">Hi there! I am wondering if you can help me with a problem I've
+                        been
                         having.
                       </div>
                       <div class="small text-gray-500">Udin Cilok · 58m</div>
@@ -218,7 +224,8 @@
                 </div>
               </li>
               <li class="nav-item dropdown no-arrow mx-1">
-                <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown"
+                <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
+                   data-toggle="dropdown"
                    aria-haspopup="true" aria-expanded="false">
                   <i class="fas fa-tasks fa-fw"></i>
                   <span class="badge badge-success badge-counter">3</span>
@@ -234,7 +241,8 @@
                         <div class="small float-right"><b>50%</b></div>
                       </div>
                       <div class="progress" style="height: 12px;">
-                        <div class="progress-bar bg-success" role="progressbar" style="width: 50%" aria-valuenow="50"
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 50%"
+                             aria-valuenow="50"
                              aria-valuemin="0" aria-valuemax="100"></div>
                       </div>
                     </div>
@@ -245,7 +253,8 @@
                         <div class="small float-right"><b>30%</b></div>
                       </div>
                       <div class="progress" style="height: 12px;">
-                        <div class="progress-bar bg-warning" role="progressbar" style="width: 30%" aria-valuenow="30"
+                        <div class="progress-bar bg-warning" role="progressbar" style="width: 30%"
+                             aria-valuenow="30"
                              aria-valuemin="0" aria-valuemax="100"></div>
                       </div>
                     </div>
@@ -271,7 +280,8 @@
                   <img class="img-profile rounded-circle" src="/img/boy.png" style="max-width: 60px">
                   <span class="ml-2 d-none d-lg-inline text-white small">Maman Ketoprak</span>
                 </a>
-                <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                     aria-labelledby="userDropdown">
                   <a class="dropdown-item" href="#">
                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                     Profile
@@ -285,7 +295,8 @@
                     Activity Log
                   </a>
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="javascript:void(0);" data-toggle="modal" data-target="#logoutModal">
+                  <a class="dropdown-item" href="javascript:void(0);" data-toggle="modal"
+                     data-target="#logoutModal">
                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                     Logout
                   </a>

@@ -1,4 +1,5 @@
 <template>
+
   <div class="container-fluid" id="container-wrapper">
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
       <h1 class="h3 mb-0 text-gray-800">Form Basics</h1>
@@ -34,11 +35,11 @@
                 <input type="text" class="form-control" id="description"  placeholder="Description" v-model="vancancy.description">
               </div>
               <p>Status</p>
-              <input type="radio" id="stt0" v-model="vancancy.status" name="fav_language" value="0">
+              <input type="radio" id="stt0" v-model="vancancy.status" name="fav_language" value=0>
               <label for="stt0">Start</label><br>
-              <input type="radio" id="stt1" v-model="vancancy.status" name="fav_language" value="1">
+              <input type="radio" id="stt1" v-model="vancancy.status" name="fav_language" value=1>
               <label for="stt1">End</label><br>
-              <input type="radio" id="stt2" v-model="vancancy.status" name="fav_language" value="2">
+              <input type="radio" id="stt2" v-model="vancancy.status" name="fav_language" value=2>
               <label for="stt2">End</label>
               <p>DepartmentId</p>
               <select class="form-control form-control-lg  mb-3" @change='selectOption($event)' v-model="vancancy.departmentId">
@@ -52,11 +53,11 @@
               </div>
               <div class="form-group">
                 <label for="salary">Salary</label>
-                <input type="text" class="form-control" id="salary"  placeholder="($)" v-model="vancancy.salary">
+                <input type="number" class="form-control" id="salary"  placeholder="($)" v-model="vancancy.salary">
               </div>
               <div class="form-group">
                 <label for="numberOfJobs">Number Of Jobs</label>
-                <input type="text" class="form-control" id="numberOfJobs"  placeholder="0" v-model="vancancy.numberOfJobs">
+                <input type="number" class="form-control" id="numberOfJobs"  placeholder="0" v-model="vancancy.numberOfJobs">
               </div>
               <div class="form-group">
                 <label for="address">Address</label>
@@ -64,7 +65,7 @@
               </div>
               <div class="form-group">
                 <label for="experience">Experience</label>
-                <input type="text" class="form-control" id="experience"  placeholder="(year)" v-model="vancancy.experience">
+                <input type="number" class="form-control" id="experience"  placeholder="(year)" v-model="vancancy.experience">
               </div>
               <div class="form-group">
                 <label for="careerLevel">CareerLevel</label>
@@ -95,14 +96,15 @@ export default {
         ownedID: '',
         title: '',
         description: '',
-        numberOfJobs: '',
-        status: '',
+        numberOfJobs: 0,
+        status: 0,
         departmentId: '',
+        applicantId: '',
         thumbnail: '',
-        salary: '',
+        salary: 0,
         address: '',
         views: 0,
-        experience: '',
+        experience: 0,
         careerLevel: '',
         qualification: '',
         dateOfExpiration: '',
@@ -115,15 +117,19 @@ export default {
     myDateFormat(d){
       return d.getFullYear() + "-" + ("0" + d.getDate()).slice(-2) + "-" + ("0"+(d.getMonth()+1)).slice(-2);
     },
-    onSave() {
-      console.log(this.$axios)
-      // const uri = '/Vacancies';
-      // this.vancancy.dateOfExpiration= this.myDateFormat(new Date());
-      // this.vancancy.dateOfCreation= this.myDateFormat(new Date());
-      // this.vancancy.dateOfUpdate= this.myDateFormat(new Date());
-      // $axios.$post(uri, this.vancancy).then((response) => {
-      //   this.$router.push('/admin/Vancancy')
-      // })
+    async fetchSomething() {
+      const data = await this.$axios.$get('Vacancies')
+      console.log(data)
+    },
+    async onSave() {
+      const uri = 'Vacancies';
+      this.vancancy.dateOfExpiration= new Date().toISOString();
+      this.vancancy.dateOfCreation= new Date().toISOString();
+      this.vancancy.dateOfUpdate= new Date().toISOString();
+      console.log(this.vancancy)
+      await this.$axios.$post(uri, this.vancancy).then((response) => {
+        this.$router.push('/admin/Vancancy')
+      })
     },
     selectOption(event) {
       this.vancancy.category = event.target.value

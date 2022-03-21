@@ -15,51 +15,49 @@
       <div class="col-lg-12">
         <div class="card mb-4">
           <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-            <td><a href="/Admin/Vancancy/form_basics.html" class="btn btn-primary">Create</a></td>
+              <NuxtLink to="/admin/Vancancy/create">
+                <button class="btn btn-primary"> Create</button>
+              </NuxtLink>
           </div>
           <div class="table-responsive p-3">
             <table class="table align-items-center table-flush" id="dataTable">
               <thead class="thead-light">
               <tr>
-                <th>Department ID</th>
-                <th>Name</th>
-                <th>Description</th>
-                <th>Title</th>
-                <th>NumberOfJod</th>
-                <th>NumberOfHired</th>
                 <th>OwnerId</th>
+                <th>Department ID</th>
+                <th>Title</th>
+                <th>Description</th>
+                <th>NumberOfJod</th>
                 <th>Action</th>
               </tr>
               </thead>
               <tfoot>
               <tr>
-                <th>Department ID</th>
-                <th>Name</th>
-                <th>Description</th>
-                <th>Title</th>
-                <th>NumberOfJod</th>
-                <th>NumberOfHired</th>
                 <th>OwnerId</th>
+                <th>Department ID</th>
+                <th>Title</th>
+                <th>Description</th>
+                <th>NumberOfJod</th>
                 <th>Action</th>
               </tr>
               </tfoot>
               <tbody>
-              <tr>
-                <td><a href="#">RA1998</a></td>
-                <td>Udin Cilok</td>
-                <td>Baby Powder</td>
-                <td>Baby Powder</td>
-                <td>Baby Powder</td>
-                <td>Udin Cilok</td>
-                <td><span class="badge badge-success">Delivered</span></td>
-                <td><a href="/Admin/Vancancy/detail.html" class="btn btn-sm btn-primary">Detail</a></td>
+              <tr v-for="(job,index) in ListJobs" :key="index">
+                <td><a href="">{{ job.departmentId }}</a></td>
+                <td>{{ job.ownedID }}</td>
+                <td>{{ job.title }}</td>
+                <td>{{ job.description }}</td>
+                <td>{{ job.numberOfJobs }}</td>
+                <td>{{ job.title }}</td>
+                <td>{{ job.title }}</td>
+                <td><span class="badge badge-success">{{ job.title }}</span></td>
+                <td><a href="/Admin/Vancancy/detail.html" class="btn btn-sm btn-primary">{{ job.id}}</a></td>
               </tr>
               </tbody>
             </table>
           </div>
         </div>
       </div>
-
 
       <!-- Modal Logout -->
       <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelLogout"
@@ -89,9 +87,28 @@
 </template>
 
 <script>
+
+// export default function ({ $axios }) {
+//   $axios.defaults.httpsAgent = new https.Agent({ rejectUnauthorized: false });
+// }
+import axios from "axios";
+
 export default {
   name: "index",
   layout: 'admin',
+  async asyncData({app}) {
+    const ListJobs = await app.$axios.$get('Vacancies')
+    return {ListJobs}
+  },
+  data: () => ({
+    ListJobs: null
+  }),
+  methods: {
+    async fetchSomething() {
+      this.ListJobs = await this.$axios.$get('Vacancies')
+      console.log(this.ListJobs)
+    },
+  }
 }
 </script>
 

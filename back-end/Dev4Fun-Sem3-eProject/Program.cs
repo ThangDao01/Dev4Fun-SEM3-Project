@@ -5,7 +5,7 @@ using Dev4Fun_Sem3_eProject.Settings;
 using Dev4Fun_Sem3_eProject.Services;
 
 var builder = WebApplication.CreateBuilder(args);
-
+var myAllowSpecificOrigins = "_myAllowSpecificOrigins";
 builder.Services.AddDbContext<Dev4Fun_Sem3_eProjectContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("Dev4Fun_Sem3_eProjectContext")));
 
@@ -17,9 +17,15 @@ builder.Services.Configure<MailSettings>(builder.Configuration.GetSection("MailS
 builder.Services.AddTransient<IMailService, MailService>();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddCors(c =>
+builder.Services.AddCors(options =>
 {
-    c.AddPolicy("AllowOrigin", options => options.AllowAnyOrigin());
+    options.AddPolicy(name: myAllowSpecificOrigins,
+        builder =>
+        {
+            builder.WithOrigins("http://localhost:3000")
+            .AllowAnyMethod()
+            .AllowAnyHeader();
+        });
 });
 
 var app = builder.Build();
@@ -34,6 +40,7 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
+app.UseCors(myAllowSpecificOrigins);
 
 app.MapControllers();
 

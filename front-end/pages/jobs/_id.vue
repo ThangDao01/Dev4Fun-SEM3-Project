@@ -6,15 +6,15 @@
       <div class="container">
         <div class="row">
           <div class="careerfy-column-12">
-            <figure><a href="#"><img src="/extra-images/jobdetail-four-logo.jpg" alt=""></a></figure>
+            <figure><a href="#"><img :src="job.thumbnail" alt="null thumbnail"></a></figure>
             <div class="careerfy-jobdetail-four-list-text">
               <span class="careerfy-jobdetail-four-list-status">Part-Time</span>
-              <span class="careerfy-jobdetail-four-list-status color">Offered Salary: £50,000</span>
-              <h1>Full-Stack Web Developer with WordPress Experience</h1>
+              <span class="careerfy-jobdetail-four-list-status color">Offered Salary: ${{job.salary}}</span>
+              <h1>{{job.title}}</h1>
               <ul class="careerfy-jobdetail-four-options">
-                <li><i class="fa fa-map-marker"></i> Derry Street, London, United Kingdom <a href="#" class="careerfy-jobdetail-view">View om Map</a></li>
+                <li><i class="fa fa-map-marker"></i>{{job.address}}  <a href="#" class="careerfy-jobdetail-view">View om Map</a></li>
                 <li><i class="careerfy-icon careerfy-building"></i> Small Business <small>Posted now</small></li>
-                <li><a href="#"><i class="careerfy-icon careerfy-view"></i> Views 3806</a></li>
+                <li><a href="#"><i class="careerfy-icon careerfy-view"></i> Views {{job.views}}</a></li>
                 <li><i class="careerfy-icon careerfy-calendar"></i> Posted Date: September 3, 2018</li>
                 <li><i class="careerfy-icon careerfy-calendar"></i> Last Date: September 30, 2018</li>
               </ul>
@@ -47,7 +47,7 @@
               <div class="careerfy-typo-wrap">
                 <div class="careerfy-jobdetail-content">
 
-                  <div class="careerfy-content-title"><h2>Job Description</h2></div>
+                  <div class="careerfy-content-title"><h2>{{job.description}}</h2></div>
                   <div class="careerfy-description">
                     <p>One rank beheld bluebird after outside ignobly allegedly more when oh arrogantly vehement irresistibly fussy penguin insect additionally wow absolutely crud meretriciously hastily dalmatian a glowered inset one echidna cassowary some parrot and much as goodness some froze the sullen much connected bat wonderfully on instantaneously eel valiantly petted this along across highhandedly much dog out the much alas evasively neutral lazy reset.</p>
                   </div>
@@ -276,6 +276,34 @@
 export default {
   name: "jobs-detail",
   layout: 'home',
+  async fetch() {
+    const uri = 'Vacancies/' + this.$route.params.id
+    this.job = await this.$axios.$get(uri)
+    return this.job
+  },
+  data() {
+    return {
+      job: {
+        ownedID: '',
+        title: '',
+        description: '',
+        numberOfJobs: 0,
+        status: 0,
+        departmentId: '',
+        applicantId: '',
+        thumbnail: '',
+        salary: 0,
+        address: '',
+        views: 0,
+        experience: 0,
+        careerLevel: '',
+        qualification: '',
+        dateOfExpiration: '',
+        dateOfCreation: '',
+        dateOfUpdate: '',
+      }
+    }
+  },
 }
 </script>
 

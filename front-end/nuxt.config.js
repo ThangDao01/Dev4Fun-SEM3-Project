@@ -15,10 +15,20 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
+  proxy: {
+    '/api/': {
+      target: process.env.MAIN_API_URL, // a url for your api
+      secure: !process.env.ENV === 'development'
+    }
+  },
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
 
+  // axios: {
+  //   baseURL: 'https://localhost:7187/api',
+  //   timeout: 30000
+  // },
   axios: {
-    baseURL: 'https://localhost:7187/api',
+    baseURL: 'https://localhost:7187/api/',
     timeout: 30000
   },
 
@@ -39,6 +49,7 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    '@nuxtjs/axios'
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
