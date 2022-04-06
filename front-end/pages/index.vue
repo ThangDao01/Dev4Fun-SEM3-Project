@@ -332,7 +332,8 @@
 
     </div>
     <!-- Main Content -->
-  </div></template>
+  </div>
+</template>
 
 <script>
 export default {

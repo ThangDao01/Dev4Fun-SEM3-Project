@@ -8,7 +8,7 @@
         <div class="container">
           <div class="row">
             <aside class="col-md-2">
-                <NuxtLink class="careerfy-logo" to="/home"><img src="/images/logo.png" alt=""></NuxtLink>
+                <NuxtLink class="careerfy-logo" to="/"><img src="/images/logo.png" alt=""></NuxtLink>
             </aside>
             <aside class="col-md-6">
               <nav class="careerfy-navigation">
@@ -22,33 +22,25 @@
                 </div>
                 <div class="collapse navbar-collapse" id="careerfy-navbar-collapse-1">
                   <ul class="navbar-nav">
-                    <li class="active">
-                      <NuxtLink to="/home"> Home</NuxtLink>
+                    <li>
+                      <NuxtLink to="/"> Home</NuxtLink>
                     </li>
                     <li>
                       <NuxtLink to="/jobs">Jobs</NuxtLink>
-                      <ul class="sub-menu">
-                        <li>
-                          <NuxtLink to="/jobs"> Job Grid W/filter</NuxtLink>
-                        </li>
-                        <li>
-                          <NuxtLink to="/jobs/1">Job Detail</NuxtLink>
-                        </li>
-                      </ul>
                     </li>
-                    <li><a href="#">Recuitment</a>
+                    <li v-if="currentAccount.name !== null"><a href="#">Recuitment </a>
                       <ul class="sub-menu">
-                        <li><a href="candidate-dashboard-applied-jobs.html">Applied Jobs</a></li>
+                        <li v-if="currentAccount.role < 5"><NuxtLink to="/recruitment/applied-job" >Applied Jobs</NuxtLink></li>
                         <li><a href="candidate-dashboard-changed-password.html">Changed Password</a>
                         </li>
-                        <li><a href="candidate-dashboard-cv-manager.html">CV Manager</a></li>
+                        <li v-if="currentAccount.role < 5"><NuxtLink to="/recruitment/applied-job" >CV Manager</NuxtLink></li>
                         <li><a href="candidate-dashboard-job-alert.html">Job Alert</a></li>
                         <li><a href="candidate-dashboard-profile-seting.html">Profile Setting</a></li>
                         <li><a href="candidate-dashboard-resume.html">Candidate Resume</a></li>
                         <li><a href="candidate-dashboard-saved-jobs.html">Saved Jobs</a></li>
                       </ul>
                     </li>
-                    <li><a href="about-us.html">About Us</a></li>
+                    <li><NuxtLink to="/about-us">About Us</NuxtLink></li>
                     <li><a href="contact-us.html">Contact</a></li>
                     <li><a href="faq.html">FAQ's</a></li>
                   </ul>
@@ -57,7 +49,12 @@
             </aside>
             <aside class="col-md-4">
               <div class="careerfy-right">
-                <ul class="careerfy-user-section">
+                <ul class="careerfy-user-section" v-if="currentAccount.name !== null">
+                  <li><img :src="currentAccount.thumbnail" style="width: 50px;border-radius: 50px" alt=""></li>
+                  <li><a href="#" class="careerfy-color">&nbsp;&nbsp;{{currentAccount.name}}</a></li>
+                  <li style="height: 62px;" ><a @click.prevent="logout()" style="padding-top: 10px" class="careerfy-color" href="#">Logout</a></li>
+                </ul>
+                <ul class="careerfy-user-section" v-if="currentAccount.name == null">
                   <li><a class="careerfy-color careerfy-open-signin-tab" href="#">Register</a></li>
                   <li><a class="careerfy-color careerfy-open-signup-tab" href="#">Sign in</a></li>
                 </ul>
@@ -78,7 +75,7 @@
             <div class="row">
               <aside class="widget col-md-4 widget_contact_info">
                 <div class="widget_contact_wrap">
-                  <NuxtLink to="/home" class="careerfy-footer-logo"><img src="/images/footer-logo.png" alt=""></NuxtLink>
+                  <NuxtLink to="/" class="careerfy-footer-logo"><img src="/images/footer-logo.png" alt=""></NuxtLink>
                   <p>Sed consequat sapien faus quam bibendum convallis quis in nulla. Pellentesque volutpat
                     odio eget diam cursus semper. Sed coquat sapien faucibus quam.</p>
                   <a href="#" class="careerfy-classic-btn careerfy-bgcolor">Learn more</a>
@@ -138,7 +135,7 @@
     <!-- Wrapper -->
 
     <!-- ModalLogin Box -->
-    <div class="careerfy-modal fade careerfy-typo-wrap" id="JobSearchModalSignup">
+    <div class="careerfy-modal fade careerfy-typo-wrap" :class="loginModel" id="JobSearchModalSignup">
       <div class="modal-inner-area">&nbsp;</div>
       <div class="modal-content-area">
         <div class="modal-box-area">
@@ -147,13 +144,13 @@
             <h2>Login to your account</h2>
             <span class="modal-close"><i class="fa fa-times"></i></span>
           </div>
-          <form>
+          <form @submit.prevent="login()">
             <div class="careerfy-box-title">
               <span>Choose your Account Type</span>
             </div>
             <div class="careerfy-user-options">
               <ul>
-                <li class="active">
+                <li>
                   <a href="#">
                     <i class="careerfy-icon careerfy-user"></i>
                     <span>Candidate</span>
@@ -176,18 +173,18 @@
                   <input value="Enter Your Email Address"
                          onblur="if(this.value == '') { this.value ='Enter Your Email Address'; }"
                          onfocus="if(this.value =='Enter Your Email Address') { this.value = ''; }"
-                         type="text">
+                         type="text" v-model="accountForm.email">
                   <i class="careerfy-icon careerfy-mail"></i>
                 </li>
                 <li>
                   <label>Password:</label>
                   <input value="Enter Password"
                          onblur="if(this.value == '') { this.value ='Enter Password'; }"
-                         onfocus="if(this.value =='Enter Password') { this.value = ''; }" type="text">
+                         onfocus="if(this.value =='Enter Password') { this.value = ''; }" type="password" v-model="accountForm.password">
                   <i class="careerfy-icon careerfy-multimedia"></i>
                 </li>
-                <li>
-                  <input type="submit" value="Sign In">
+                <li class="modal-close">
+                  <input type="submit" value="Sign In" >
                 </li>
               </ul>
               <div class="clearfix"></div>
@@ -218,7 +215,7 @@
       </div>
     </div>
     <!-- Modal Signup Box -->
-    <div class="careerfy-modal fade careerfy-typo-wrap" id="JobSearchModalLogin">
+    <div class="careerfy-modal fade careerfy-typo-wrap" :class="registerModel" id="JobSearchModalLogin">
       <div class="modal-inner-area">&nbsp;</div>
       <div class="modal-content-area">
         <div class="modal-box-area">
@@ -227,51 +224,34 @@
             <h2>Signup to your account</h2>
             <span class="modal-close"><i class="fa fa-times"></i></span>
           </div>
-          <form>
+          <form @submit.prevent="register()">
             <div class="careerfy-box-title">
               <span>Choose your Account Type</span>
             </div>
-            <div class="careerfy-user-options">
-              <ul>
-                <li class="active">
-                  <a href="#">
-                    <i class="careerfy-icon careerfy-user"></i>
-                    <span>Candidate</span>
-                    <small>I want to discover awesome companies.</small>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <i class="careerfy-icon careerfy-building"></i>
-                    <span>Employer</span>
-                    <small>I want to attract the best talent.</small>
-                  </a>
-                </li>
-              </ul>
-            </div>
             <div class="careerfy-user-form careerfy-user-form-coltwo">
+              <img src="https://www.floresdevida.org/wp-content/uploads/2018/06/default-user-thumbnail-1.png" style="width: 100px;margin: 50px 40%" alt="">
               <ul>
-                <li>
-                  <label>First Name:</label>
-                  <input value="Enter Your Name"
-                         onblur="if(this.value == '') { this.value ='Enter Your Name'; }"
-                         onfocus="if(this.value =='Enter Your Name') { this.value = ''; }" type="text">
-                  <i class="careerfy-icon careerfy-user"></i>
-                </li>
-                <li>
-                  <label>Last Name:</label>
-                  <input value="Enter Your Name"
-                         onblur="if(this.value == '') { this.value ='Enter Your Name'; }"
-                         onfocus="if(this.value =='Enter Your Name') { this.value = ''; }" type="text">
-                  <i class="careerfy-icon careerfy-user"></i>
-                </li>
                 <li>
                   <label>Email Address:</label>
+                  <input value="Enter Your Name"
+                         onblur="if(this.value == '') { this.value ='Enter Your Name'; }"
+                         onfocus="if(this.value =='Enter Your Name') { this.value = ''; }" type="text">
+                  <i class="careerfy-icon careerfy-mail"></i>
+                </li>
+                <li>
+                  <label>Password:</label>
+                  <input value="Password"
+                         onblur="if(this.value == '') { this.value =''; }"
+                         onfocus="if(this.value =='Enter Your Name') { this.value = ''; }" type="password">
+                  <i class="fa fa-unlock-alt"></i>
+                </li>
+                <li>
+                  <label>Full Name: </label>
                   <input value="Enter Your Email Address"
                          onblur="if(this.value == '') { this.value ='Enter Your Email Address'; }"
                          onfocus="if(this.value =='Enter Your Email Address') { this.value = ''; }"
                          type="text">
-                  <i class="careerfy-icon careerfy-mail"></i>
+                  <i class="careerfy-icon careerfy-user"></i>
                 </li>
                 <li>
                   <label>Phone Number:</label>
@@ -281,19 +261,7 @@
                          type="text">
                   <i class="careerfy-icon careerfy-technology"></i>
                 </li>
-                <li class="careerfy-user-form-coltwo-full">
-                  <label>Categories:</label>
-                  <div class="careerfy-profile-select">
-                    <select>
-                      <option>Sales & Marketing</option>
-                      <option>Sales & Marketing</option>
-                    </select>
-                  </div>
-                </li>
-                <li class="careerfy-user-form-coltwo-full">
-                  <img src="extra-images/login-robot.png" alt="">
-                </li>
-                <li class="careerfy-user-form-coltwo-full">
+                <li class="careerfy-user-form-coltwo-full modal-close">
                   <input type="submit" value="Sign Up">
                 </li>
               </ul>
@@ -316,8 +284,6 @@
         </div>
       </div>
     </div>
-
-
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <!--  <script src="script/jquery.js"></script>-->
     <!--  <script src="script/bootstrap.js"></script>-->
@@ -328,14 +294,63 @@
     <!--  <script src="plugin-script/isotope.min.js"></script>-->
     <!--  <script src="plugin-script/functions.js"></script>-->
     <!--  <script src="script/functions.js"></script>-->
-
   </div>
 
 </template>
 
 <script>
+function  test() {
+  console.log('askjcbjasbcasbc')
+}
+
 export default {
   name: "home.vue",
+  components: {
+    dirs: [
+      '~/components/recruitment-navitive'
+    ]
+  },
+  data(){
+    return{
+      registerModel:'fade',
+      loginModel:'fade',
+      currentAccount:{
+        name:'',
+        email:'',
+        phoneNumber:'',
+        thumbnail:'',
+        role: 5,
+        description: '',
+        departmentId: '',
+        dateOfCreation: '',
+        dateOfUpdate: '',
+      },
+      defaultAccount:{
+        name: null,
+        email:'',
+        phoneNumber:'',
+        thumbnail:'',
+        role: 5,
+        description: '',
+        departmentId: '',
+        dateOfCreation: '',
+        dateOfUpdate: '',
+      },
+      accountForm:{
+        id:0,
+        name:"string",
+        email:"",
+        phoneNumber:"string",
+        password:"",
+        thumbnail:"string",
+        role: 5,
+        description: "string",
+        departmentId: "string",
+        dateOfCreation: "2022-04-04T02:44:14.932Z",
+        dateOfUpdate: "2022-04-04T02:44:14.932Z"
+      },
+    }
+  },
   head() {
     return {
       link: [
@@ -349,9 +364,7 @@ export default {
         {rel: 'stylesheet', href: '/css/color.css'},
         {rel: 'stylesheet', href: '/css/style.css'},
         {rel: 'stylesheet', href: '/css/responsive.css'},
-
         {rel: 'stylesheet',href: 'https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&amp;subset=cyrillic-ext,vietnamese'},
-
       ],
       script: [
         {hid: 'stripe', src: '/script/jquery.js', defer: true},
@@ -363,9 +376,52 @@ export default {
         {hid: 'stripe', src: '/plugin-script/isotope.min.js', defer: true},
         {hid: 'stripe', src: '/plugin-script/functions.js', defer: true},
         {hid: 'stripe', src: '/script/functions.js', defer: true},
+        {hid: 'stripe', src: 'https://upload-widget.cloudinary.com/global/all.js', defer: true},
         {hid: 'stripe', src: 'https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js', defer: true},
         {hid: 'stripe', src: 'https://oss.maxcdn.com/respond/1.4.2/respond.min.js', defer: true},
       ]
+    }
+  },
+   async mounted() {
+    await this.catchWithTryCatch()
+   },
+  methods:{
+    async catchWithTryCatch() {
+      try {
+        this.currentAccount = await this.$axios.$get('CurrentAccounts')
+      } catch (error) {
+        this.currentAccount=this.defaultAccount
+        console.log('try catch');
+        console.log(error);
+      }
+    },
+    myDateFormat(d){
+      return d.getFullYear() + "-" + ("0" + d.getDate()).slice(-2) + "-" + ("0"+(d.getMonth()+1)).slice(-2);
+    },
+    async logout(){
+      await this.$axios.$get('logout')
+      this.currentAccount=this.defaultAccount
+    },
+    async login(){
+      const uri = 'CurrentAccounts';
+      this.accountForm.dateOfUpdate= new Date().toISOString();
+      this.accountForm.dateOfCreation= new Date().toISOString();
+      await this.$axios.$post(uri, this.accountForm).then((response) => {
+        this.accountForm.email=""
+        this.accountForm.password=""
+        this.loginModel='fade'
+        this.catchWithTryCatch()
+      })
+    },
+    async register(){
+      this.registerModel='fade'
+      const uri = 'Accounts';
+      this.accountForm.dateOfUpdate = new Date().toISOString();
+      this.accountForm.role = 5;
+      this.accountForm.dateOfCreation = new Date().toISOString();
+      await this.$axios.$post(uri, this.accountForm).then((response) => {
+          this.registerModel='fade-in'
+      })
     }
   }
 }

@@ -29,23 +29,10 @@
               <div class="careerfy-subheader-form">
                 <form class="careerfy-banner-search">
                   <ul>
-                    <li>
-                      <input value="Job Title, Keywords, or Company" onblur="if(this.value == '') { this.value ='Job Title, Keywords, or Company'; }" onfocus="if(this.value =='Job Title, Keywords, or Company') { this.value = ''; }" type="text">
+                    <li style="min-width: 90%">
+                      <input value="Job Title, Keywords, or Company" @change="search()" v-model="searchResult" onblur="if(this.value == '') { this.value ='Job Title, Keywords, or Company'; }" onfocus="if(this.value =='Job Title, Keywords, or Company') { this.value = ''; }" type="text">
                     </li>
-                    <li>
-                      <input value="City, State or ZIP" onblur="if(this.value == '') { this.value ='City, State or ZIP'; }" onfocus="if(this.value =='City, State or ZIP') { this.value = ''; }" type="text">
-                      <i class="careerfy-icon careerfy-location"></i>
-                    </li>
-                    <li>
-                      <div class="careerfy-select-style">
-                        <select>
-                          <option>Categories</option>
-                          <option>Categories</option>
-                          <option>Categories</option>
-                        </select>
-                      </div>
-                    </li>
-                    <li class="careerfy-banner-submit"> <input type="submit" value=""> <i class="careerfy-icon careerfy-search"></i> </li>
+                    <li class="careerfy-banner-submit">  <i class="careerfy-icon careerfy-search"></i> </li>
                   </ul>
                 </form>
               </div>
@@ -55,7 +42,6 @@
         </div>
       </div>
       <!-- Main Section -->
-
       <!-- Main Section -->
       <div class="careerfy-main-section">
         <div class="container">
@@ -229,7 +215,6 @@
                   <li class="careerfy-column-4" v-for="(jobs,index) in ListJob" :key="index">
                     <div class="careerfy-job-grid-wrap">
                       <figure>
-                        <span class="careerfy-jobtype-label">Freelance</span>
                         <NuxtLink :to="'/jobs/'+jobs.id"><img :src="jobs.thumbnail" alt="null thumbnail"></NuxtLink>
                         <span class="careerfy-featured-label">Featured</span>
                       </figure>
@@ -241,8 +226,7 @@
                           <li><NuxtLink :to="'/jobs/'+jobs.id">{{ jobs.departmentId }}</NuxtLink></li>
                           <li>{{ jobs.dateOfCreation }}</li>
                         </ul>
-                        <span class="careerfy-job-location"><i class="careerfy-icon careerfy-maps-and-flags">{{ jobs.ownedID }}</i> </span>
-                        <NuxtLink :to="'/jobs/'+jobs.id"><i class="fa fa-heart"></i></NuxtLink>
+                        <span class="careerfy-job-location"><i class="careerfy-icon careerfy-view"></i> {{ jobs.views}}</span>
                       </div>
                     </div>
                   </li>
@@ -266,7 +250,6 @@
         </div>
       </div>
       <!-- Main Section -->
-
     </div>
     <!-- Main Content -->
   </div>
@@ -286,9 +269,21 @@ export default {
   data(){
     return{
       ListJob:null,
+      searchResult:null,
     }
   },
   methods: {
+    async search(){
+      if(this.searchResult==''){
+        this.ListJob = await this.$axios.$get('Vacancies')
+      }else{
+        var url = "search/"+this.searchResult
+        this.ListJob = await this.$axios.$get(url)
+        if(this.ListJob==''){
+          this.ListJob = await this.$axios.$get('Vacancies')
+        }
+      }
+    }
   }
 }
 </script>

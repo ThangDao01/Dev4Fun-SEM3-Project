@@ -126,9 +126,8 @@ export default {
       this.vancancy.dateOfExpiration= new Date().toISOString();
       this.vancancy.dateOfCreation= new Date().toISOString();
       this.vancancy.dateOfUpdate= new Date().toISOString();
-      console.log(this.vancancy)
       await this.$axios.$post(uri, this.vancancy).then((response) => {
-        this.$router.push('/admin/Vancancy')
+          this.$router.push('/admin/Vancancy')
       })
     },
     selectOption(event) {

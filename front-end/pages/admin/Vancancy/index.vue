@@ -1,17 +1,17 @@
 <template>
   <div class="container-fluid" id="container-wrapper">
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-      <h1 class="h3 mb-0 text-gray-800">DataTables</h1>
+      <h1 class="h3 mb-0 text-gray-800">Vacancies Tables</h1>
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="./">Home</a></li>
         <li class="breadcrumb-item">Tables</li>
-        <li class="breadcrumb-item active" aria-current="page">DataTables</li>
+        <li class="breadcrumb-item active" aria-current="page">Vacancies Tables</li>
       </ol>
     </div>
 
     <!-- Row -->
     <div class="row">
-      <!-- Datatables -->
+      <!-- Vacancies Tables -->
       <div class="col-lg-12">
         <div class="card mb-4">
           <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
@@ -23,35 +23,42 @@
             <table class="table align-items-center table-flush" id="dataTable">
               <thead class="thead-light">
               <tr>
-                <th>OwnerId</th>
-                <th>Department ID</th>
-                <th>Title</th>
-                <th>Description</th>
-                <th>NumberOfJod</th>
+                <th>Id</th>
+                <th>Thumbnail</th>
+                <th>Name</th>
+                <th>Department</th>
+                <th>Amount</th>
+                <th>Salary</th>
+                <th>Experience</th>
                 <th>Action</th>
               </tr>
               </thead>
               <tfoot>
               <tr>
-                <th>OwnerId</th>
-                <th>Department ID</th>
-                <th>Title</th>
-                <th>Description</th>
-                <th>NumberOfJod</th>
+                <th>Id</th>
+                <th>Thumbnail</th>
+                <th>Name</th>
+                <th>Department</th>
+                <th>Amount</th>
+                <th>Salary</th>
+                <th>Experience</th>
                 <th>Action</th>
               </tr>
               </tfoot>
               <tbody>
               <tr v-for="(job,index) in ListJobs" :key="index">
-                <td><a href="">{{ job.departmentId }}</a></td>
-                <td>{{ job.ownedID }}</td>
+                <td>{{ job.id }}</td>
+                <td><img :src="job.thumbnail" style="width: 100px;" alt=""></td>
                 <td>{{ job.title }}</td>
-                <td>{{ job.description }}</td>
+                <td>{{ job.departmentId }}</td>
                 <td>{{ job.numberOfJobs }}</td>
-                <td>{{ job.title }}</td>
-                <td>{{ job.title }}</td>
-                <td><span class="badge badge-success">{{ job.title }}</span></td>
-                <td><a href="/Admin/Vancancy/detail.html" class="btn btn-sm btn-primary">{{ job.id}}</a></td>
+                <td>{{ job.salary }}$</td>
+                <td>{{ job.experience }}</td>
+                <td>
+                  <span class="badge badge-success">Edit</span>
+                  <span class="badge badge-danger">Delete</span>
+                  <span class="badge badge-warning">Detail</span>
+                </td>
               </tr>
               </tbody>
             </table>
@@ -104,6 +111,7 @@ export default {
     ListJobs: null
   }),
   methods: {
+
     async fetchSomething() {
       this.ListJobs = await this.$axios.$get('Vacancies')
       console.log(this.ListJobs)
