@@ -13,50 +13,45 @@
       <div class="col-lg-12">
         <div class="card mb-4">
           <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-              <NuxtLink to="/admin/Vancancy/create">
-                <button class="btn btn-primary"> Create</button>
-              </NuxtLink>
+            <NuxtLink to="/admin/Vancancy/create">
+              <button class="btn btn-primary"> Create</button>
+            </NuxtLink>
           </div>
           <div class="table-responsive p-3">
             <table class="table align-items-center table-flush" id="dataTable">
               <thead class="thead-light">
               <tr>
                 <th>Id</th>
-                <th>Thumbnail</th>
+                <th>Avatar</th>
                 <th>Name</th>
                 <th>Department</th>
-                <th>Amount</th>
-                <th>Salary</th>
-                <th>Experience</th>
-                <th>Action</th>
+                <th>Phone</th>
+                <th>Role</th>
               </tr>
               </thead>
               <tfoot>
               <tr>
                 <th>Id</th>
-                <th>Thumbnail</th>
+                <th>Avatar</th>
                 <th>Name</th>
                 <th>Department</th>
-                <th>Amount</th>
-                <th>Salary</th>
-                <th>Experience</th>
-                <th>Action</th>
+                <th>Phone</th>
+                <th>Role</th>
               </tr>
               </tfoot>
               <tbody>
-              <tr v-for="(job,index) in ListJobs" :key="index">
-                <td>{{ job.id }}</td>
-                <td><img :src="job.thumbnail" style="width: 100px;" alt=""></td>
-                <td>{{ job.title }}</td>
-                <td>{{ job.departmentId }}</td>
-                <td>{{ job.numberOfJobs }}</td>
-                <td>{{ job.salary }}$</td>
-                <td>{{ job.experience }} (year)</td>
+              <tr v-for="(acc,index) in ListAccount" :key="index">
+                <td>{{ acc.id }}</td>
+                <td><img :src="acc.thumbnail" style="width: 100px;" alt=""></td>
+                <td>{{ acc.name }}</td>
+                <td>{{ acc.departmentId }}</td>
+                <td>{{ acc.phoneNumber }}</td>
                 <td>
-                  <button class="badge badge-success">Edit</button><br>
-                  <button class="badge badge-danger">Delete</button><br>
-                  <NuxtLink :to="'/jobs/'+job.id"><button class="badge badge-warning">View</button></NuxtLink>
-                </td>
+                  <span v-if="acc.role==0" style="color: red">Admin</span>
+                  <span v-if="acc.role==1" style="color: orange">Manager</span>
+                  <span v-if="acc.role==2" style="color: blue">Mentor</span>
+                  <span v-if="acc.role==3" style="color: violet;">Hr</span>
+                  <span v-if="acc.role==4" style="color: yellow;">Applicants</span></td>
               </tr>
               </tbody>
             </table>
@@ -102,14 +97,14 @@ export default {
   name: "index",
   layout: 'admin',
   data: () => ({
-    ListJobs: null
+    ListAccount: null
   }),
   mounted() {
     this.fetchSomething()
   },
   methods: {
     async fetchSomething() {
-      this.ListJobs = await this.$axios.$get('Vacancies')
+      this.ListAccount = await this.$axios.$get('Accounts')
     },
   }
 }

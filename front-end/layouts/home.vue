@@ -31,18 +31,18 @@
                     <li v-if="currentAccount.name !== null"><a href="#">Recuitment </a>
                       <ul class="sub-menu">
                         <li v-if="currentAccount.role < 5"><NuxtLink to="/recruitment/applied-job" >Applied Jobs</NuxtLink></li>
-                        <li><a href="candidate-dashboard-changed-password.html">Changed Password</a>
+                        <li><a href="/candidate-dashboard-changed-password">Changed Password</a>
                         </li>
                         <li v-if="currentAccount.role < 5"><NuxtLink to="/recruitment/applied-job" >CV Manager</NuxtLink></li>
-                        <li><a href="candidate-dashboard-job-alert.html">Job Alert</a></li>
-                        <li><a href="candidate-dashboard-profile-seting.html">Profile Setting</a></li>
-                        <li><a href="candidate-dashboard-resume.html">Candidate Resume</a></li>
-                        <li><a href="candidate-dashboard-saved-jobs.html">Saved Jobs</a></li>
+                        <li><a href="/candidate-dashboard-job-alert">Job Alert</a></li>
+                        <li><a href="/candidate-dashboard-profile-seting">Profile Setting</a></li>
+                        <li><a href="/candidate-dashboard-resume">Candidate Resume</a></li>
+                        <li><a href="/candidate-dashboard-saved-jobs">Saved Jobs</a></li>
                       </ul>
                     </li>
                     <li><NuxtLink to="/about-us">About Us</NuxtLink></li>
-                    <li><a href="contact-us.html">Contact</a></li>
-                    <li><a href="faq.html">FAQ's</a></li>
+                    <li><a href="/contact-us">Contact</a></li>
+                    <li  v-if="currentAccount.role < 3"><NuxtLink to="/admin">Admin</NuxtLink></li>
                   </ul>
                 </div>
               </nav>
@@ -353,6 +353,7 @@ export default {
   },
   head() {
     return {
+      title:'ABC Home',
       link: [
         {rel: 'stylesheet', href: '/css/bootstrap.min.css'},
         {rel: 'stylesheet', href: '/css/bootstrap.css'},
@@ -388,7 +389,7 @@ export default {
   methods:{
     async catchWithTryCatch() {
       try {
-        this.currentAccount = await this.$axios.$get('CurrentAccounts')
+          this.currentAccount = await this.$axios.$get('CurrentAccounts')
       } catch (error) {
         this.currentAccount=this.defaultAccount
         console.log('try catch');

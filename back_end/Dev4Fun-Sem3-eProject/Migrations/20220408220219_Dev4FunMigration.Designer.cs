@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Dev4Fun_Sem3_eProject.Migrations
 {
     [DbContext(typeof(Dev4Fun_Sem3_eProjectContext))]
-    [Migration("20220405030008_ABC_Dev4Fun_Migration")]
-    partial class ABC_Dev4Fun_Migration
+    [Migration("20220408220219_Dev4FunMigration")]
+    partial class Dev4FunMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

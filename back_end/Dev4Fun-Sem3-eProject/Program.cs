@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Dev4Fun_Sem3_eProject.Data;
+using Dev4Fun_Sem3_eProject.Models;
 using Dev4Fun_Sem3_eProject.Settings;
 using Dev4Fun_Sem3_eProject.Services;
 
@@ -16,6 +17,7 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.Configure<MailSettings>(builder.Configuration.GetSection("MailSettings"));
 builder.Services.AddTransient<IMailService, MailService>();
+builder.Services.AddTransient<DataSeeder>();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddCors(options =>
@@ -28,8 +30,22 @@ builder.Services.AddCors(options =>
             .AllowAnyHeader();
         });
 });
-
 var app = builder.Build();
+
+
+if (args.Length == 1 && args[0].ToLower() == "dataseeder")
+    {
+    DataSeeder(app);
+    }
+void DataSeeder(IHost app)
+{
+    var scopedFactory = app.Services.GetService<IServiceScopeFactory>();
+
+    using (var scope = scopedFactory.CreateScope())
+    {
+        var survice = scope.ServiceProvider.GetService<DataSeeder>();
+    }
+}
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

@@ -15,9 +15,9 @@
             <div class="row align-items-center">
               <div class="col mr-2">
                 <div class="text-xs font-weight-bold text-uppercase mb-1">Earnings (Monthly)</div>
-                <div class="h5 mb-0 font-weight-bold text-gray-800">$100,000,000,000</div>
+                <div class="h5 mb-0 font-weight-bold text-gray-800">0$</div>
                 <div class="mt-2 mb-0 text-muted text-xs">
-                  <span class="text-success mr-2"><i class="fa fa-arrow-up"></i> 3.48%</span>
+                  <span class="text-success mr-2"><i class="fa fa-usd"></i> 3.48%</span>
                   <span>Since last month</span>
                 </div>
               </div>
@@ -34,15 +34,13 @@
           <div class="card-body">
             <div class="row no-gutters align-items-center">
               <div class="col mr-2">
-                <div class="text-xs font-weight-bold text-uppercase mb-1">Sales</div>
-                <div class="h5 mb-0 font-weight-bold text-gray-800">650</div>
+                <div class="text-xs font-weight-bold text-uppercase mb-1">Vacancies</div>
+                <div class="h5 mb-0 font-weight-bold text-gray-800">{{countVacancies}}</div>
                 <div class="mt-2 mb-0 text-muted text-xs">
-                  <span class="text-success mr-2"><i class="fas fa-arrow-up"></i> 12%</span>
-                  <span>Since last years</span>
                 </div>
               </div>
               <div class="col-auto">
-                <i class="fas fa-shopping-cart fa-2x text-success"></i>
+                <i class="fas fa-briefcase fa-2x text-success"></i>
               </div>
             </div>
           </div>
@@ -54,11 +52,9 @@
           <div class="card-body">
             <div class="row no-gutters align-items-center">
               <div class="col mr-2">
-                <div class="text-xs font-weight-bold text-uppercase mb-1">New User</div>
-                <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">366</div>
+                <div class="text-xs font-weight-bold text-uppercase mb-1">User</div>
+                <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">{{countVacancies}}</div>
                 <div class="mt-2 mb-0 text-muted text-xs">
-                  <span class="text-success mr-2"><i class="fas fa-arrow-up"></i> 20.4%</span>
-                  <span>Since last month</span>
                 </div>
               </div>
               <div class="col-auto">
@@ -74,15 +70,13 @@
           <div class="card-body">
             <div class="row no-gutters align-items-center">
               <div class="col mr-2">
-                <div class="text-xs font-weight-bold text-uppercase mb-1">Pending Requests</div>
-                <div class="h5 mb-0 font-weight-bold text-gray-800">18</div>
+                <div class="text-xs font-weight-bold text-uppercase mb-1">Web Viѕitor  </div>
+                <div class="h5 mb-0 font-weight-bold text-gray-800">{{countView}}</div>
                 <div class="mt-2 mb-0 text-muted text-xs">
-                  <span class="text-danger mr-2"><i class="fas fa-arrow-down"></i> 1.10%</span>
-                  <span>Since yesterday</span>
                 </div>
               </div>
               <div class="col-auto">
-                <i class="fas fa-comments fa-2x text-warning"></i>
+                <i class="fas fa fa-eye fa-2x text-warning"></i>
               </div>
             </div>
           </div>
@@ -336,18 +330,28 @@ export default {
   layout: 'admin',
   head() {
     return {
-      title: "Admin",
     }
   },
   data(){
     return{
-      ListJob:null,
+      countAccount:0,
+      countVacancies:0,
+      countView:0,
     }
   },
+  mounted() {
+    this.dasboardData();
+  },
   methods:{
-    // async upDate(){
-    //   this.ListJob = await this.$axios.$get('/Vacancies');
-    // },
+    async dasboardData() {
+      var checkAccount = await this.$axios.$get('Accounts')
+      var checkVacancies = await this.$axios.$get('Vacancies')
+      this.countAccount = checkAccount.length
+      this.countVacancies = checkVacancies.length
+      for (let i = 0; i < checkVacancies.length; i++) {
+         this.countView += checkVacancies[i].views
+      }
+    }
   }
 }
 </script>

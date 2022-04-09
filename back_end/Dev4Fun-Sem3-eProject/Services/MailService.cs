@@ -94,7 +94,7 @@ namespace Dev4Fun_Sem3_eProject.Services
                 applicants = _context.Applicants.FromSqlRaw(sqlSelect).FirstOrDefault();
                 //applicants = _context.Applicants.Find(mailNotice.IdUser);
 
-                EmailTemplateText = string.Format(EmailTemplateText, vacancies.Title, applicants.ApplicantName, mailNotice.Time.AddDays(3).AddHours(7), mailNotice.IdMentor, mailNotice.InterviewLocation, mailNotice.IdHr);
+                EmailTemplateText = string.Format(EmailTemplateText, vacancies.Title, mailNotice.UserName, "Đào Thắng", mailNotice.Time.AddDays(3).AddHours(7), mailNotice.InterviewLocation, mailNotice.IdHr);
 
                 BodyBuilder emailBodyBuilder = new BodyBuilder();
                 emailBodyBuilder.HtmlBody = EmailTemplateText;
@@ -117,7 +117,7 @@ namespace Dev4Fun_Sem3_eProject.Services
             }
         }
 
-        public bool SendRefuseEmail(MailRefuse mailRefuse)
+        public bool  SendRefuseEmail(MailRefuse mailRefuse)
         {
             try
             {

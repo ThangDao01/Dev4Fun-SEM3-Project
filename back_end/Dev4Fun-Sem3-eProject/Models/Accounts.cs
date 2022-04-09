@@ -8,7 +8,7 @@
         public string PhoneNumber { get; set; }
         public string Password { get; set; }
         public string Thumbnail { get; set; }
-        public int Role { get; set; }   //1 Admin // 2 manager // 3 mentor // 4 hr // 5 applicants
+        public int Role { get; set; }   //0 Admin // 1 manager // 2 mentor // 3 hr // 4 applicants
         public string Description { get; set; }
         public string DepartmentId { get; set; }
         public DateTime DateOfCreation { get; set; }

@@ -114,7 +114,6 @@ namespace Dev4Fun_Sem3_eProject.Controllers
             {
                 return NotFound();
             }
-
             _context.Vacancies.Remove(vacancies);
             await _context.SaveChangesAsync();
 

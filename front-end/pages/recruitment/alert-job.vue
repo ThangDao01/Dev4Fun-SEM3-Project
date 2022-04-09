@@ -69,7 +69,7 @@
                   <div class="careerfy-applied-jobs">
                     <ul class="careerfy-row">
                       <li class="careerfy-column-12" v-for="(apply,index) in applied_job" :key="index">
-                        <div class="careerfy-applied-jobs-wrap" style="position: relative" v-if="apply.status==0">
+                        <div class="careerfy-applied-jobs-wrap" style="position: relative" v-if="apply.status==1">
                           <a href="#" class="careerfy-applied-jobs-thumb"><img :src="apply.candidateThumbnail"
                                                                                alt=""></a>
                           <div class="careerfy-applied-jobs-text">
@@ -80,13 +80,6 @@
                                 <li><i class="fa fa-map-marker"></i>Hà Nội</li>
                                 <li><i class="careerfy-icon careerfy-calendar"></i>{{ apply.interviewDate }}</li>
                               </ul>
-                              <label style="color: #4f87fb;width: 100%;" for="mentor">Choose Mentor :
-                                {{ apply.mentorId }}</label>
-                              <select id="mentor" name="mentor" v-model="apply.mentorId">
-                                <option :value="mentor.id" v-for="(mentor,index) in mentors" :key="index">
-                                  {{ mentor.name }} / EX {{ mentor.experience }} / {{ mentor.jobs }}
-                                </option>
-                              </select>
                             </div>
                             <a class="careerfy-savedjobs-links"><i class="careerfy-icon careerfy-rubbish"
                                                                    @click="deleteCv(index)"></i></a>
@@ -95,7 +88,7 @@
                             <input type="hidden">
                             <button @click="accept(index)"
                                     style="position: absolute;right: 10px;bottom: 10px;width: 100px;height: 30px;">
-                              Accept
+                              Passing
                             </button>
                           </div>
                         </div>
@@ -135,7 +128,6 @@ export default {
   data() {
     return {
       titlejobs: 'casc',
-      mailResult: {},
       view_model: {
         status: 'none',
         detail: '',
@@ -153,15 +145,22 @@ export default {
         candidateLocation: "",
         candidateName: "",
         candidatePhone: "",
-        candidateThumbnail: "hhhhhhh",
+        candidateThumbnail: "",
         interviewDate: "",
         jobId: 1,
-        jobName: "casjbckjasbc",
+        jobName: "",
         mentorId: 0,
         messenger: "",
         status: 0
       }
       ],
+      mailResult: {
+        UserName: '',
+        UserEmailId: '',
+        IdVacancy: '',
+        IdApplicant: '',
+        Time: '',
+      },
       mentors: [
         {
           id: '0',
@@ -216,20 +215,18 @@ export default {
       this.view_model.status = 'none'
     },
     async accept(index) {
-      this.applied_job[index].status = 1;
+      this.applied_job[index].status = 2;
       const uri2 = 'AppliedJobs/' + this.applied_job[index].id
       await this.$axios.$put(uri2, this.applied_job[index])
-      const uri = '/Email/SendNoticeEmail'
+      const uri = '/Email/SendConfirmEmail'
       const formData = new FormData();
       formData.append('UserName' ,this.applied_job[index].candidateName);
       formData.append('UserEmailId',this.applied_job[index].candidateEmail);
       formData.append('IdVacancy',this.applied_job[index].jobId);
       formData.append('IdApplicant','1');
-      formData.append('IdMentor','1');
-      formData.append('IdHr','1');
       formData.append('Time', new Date().toISOString());
-      formData.append('InterviewLocation','Số 8 Tôn Thất Thuyết, Mỹ Đình, TP.HN.');
       await this.$axios.$post(uri,formData)
+
     },
     async deleteCv(index) {
       this.applied_job[index].status = 3;
@@ -243,7 +240,6 @@ export default {
       formData.append('IdApplicant','1');
       console.log(formData)
       await this.$axios.$post(uri2,formData)
-
     }
   }
 }

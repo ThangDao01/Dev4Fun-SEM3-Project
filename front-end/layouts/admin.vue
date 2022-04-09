@@ -38,22 +38,9 @@
           </a>
           <div id="collapseTable" class="collapse" aria-labelledby="headingTable" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-              <a class="collapse-item" href="/Admin/Account/form_basics.html">Simple Tables</a>
-              <a class="collapse-item" href="/Admin/Account/simple-tables.html">DataTables</a>
-            </div>
-          </div>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseBootstrap"
-             aria-expanded="true" aria-controls="collapseBootstrap">
-            <i class="far fa-fw fa-window-maximize"></i>
-            <span>ApplicantVancancy</span>
-          </a>
-          <div id="collapseBootstrap" class="collapse" aria-labelledby="headingBootstrap"
-               data-parent="#accordionSidebar">
-            <div class="bg-white py-2 collapse-inner rounded">
-              <NuxtLink class="collapse-item" to="/admin/ApplicantVancancy">Detail</NuxtLink>
-              <NuxtLink class="collapse-item" to="/admin/ApplicantVancancy/create">Create</NuxtLink>
+              <NuxtLink class="collapse-item" to="/admin/Account">Detail</NuxtLink>
+              <NuxtLink class="collapse-item" to="/admin/Auth/login">login</NuxtLink>
+              <NuxtLink class="collapse-item" to="/admin/Auth/register">register</NuxtLink>
             </div>
           </div>
         </li>
@@ -96,12 +83,11 @@
             <div class="bg-white py-2 collapse-inner rounded">
               <h6 class="collapse-header">Example Pages</h6>
               <NuxtLink class="collapse-item" to="/admin/Auth/login">login</NuxtLink>
-              <NuxtLink class="collapse-item" to="/admin/Auth/register  ">register</NuxtLink>
+              <NuxtLink class="collapse-item" to="/admin/Auth/register">register</NuxtLink>
               <a class="collapse-item" href="/Admin/Auth/404.html">404 Page</a>
             </div>
           </div>
         </li>
-
       </ul>
       <!-- Sidebar -->
       <div id="content-wrapper" class="d-flex flex-column">
@@ -278,7 +264,7 @@
                 <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
                    aria-haspopup="true" aria-expanded="false">
                   <img class="img-profile rounded-circle" src="/img/boy.png" style="max-width: 60px">
-                  <span class="ml-2 d-none d-lg-inline text-white small">Maman Ketoprak</span>
+                  <span class="ml-2 d-none d-lg-inline text-white small">{{currentAccount.name}}</span>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                      aria-labelledby="userDropdown">
@@ -342,8 +328,24 @@
 <script>
 export default {
   name: "admin.vue",
+  data() {
+    return {
+      currentAccount: {
+        name: '',
+        email: '',
+        phoneNumber: '',
+        thumbnail: '',
+        role: 5,
+        description: '',
+        departmentId: '',
+        dateOfCreation: '',
+        dateOfUpdate: '',
+      },
+    }
+  },
   head() {
     return {
+      title:'ABC Admin',
       link: [
         {rel: 'stylesheet', href: '/vendor/fontawesome-free/css/all.min.css'},
         {rel: 'stylesheet', href: '/vendor/bootstrap/css/bootstrap.min.css'},
@@ -356,6 +358,21 @@ export default {
         {hid: 'stripe', src: '/js/ruang-admin.min.js', defer: true},
       ]
     }
+  },
+  async mounted() {
+    await this.authLogin()
+  },
+  methods: {
+    async authLogin() {
+      try {
+        this.currentAccount = await this.$axios.$get('CurrentAccounts')
+        if (this.currentAccount.role > 2){
+          await this.$router.push('/admin/login')
+        }
+      } catch (error) {
+        await this.$router.push('/admin/login')
+      }
+    },
   }
 }
 </script>

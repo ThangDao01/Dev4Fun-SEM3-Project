@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Dev4Fun_Sem3_eProject.Migrations
 {
-    public partial class ABC_Dev4Fun_Migration : Migration
+    public partial class Dev4FunMigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

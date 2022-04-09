@@ -92,7 +92,9 @@
                   </div>
                   <form @submit.prevent="sendJobs()">
                     <div class="careerfy-user-form careerfy-user-form-coltwo-full">
-                      <img id="avatarUser" :src="avatarDefault" style="width: 150px;margin: 50px 35%;border-radius: 100px" alt="Error Image Url">
+                      <div style="position: relative">
+                        <img id="avatarUser" :src="avatarDefault" style="width: 150px;margin: 50px 35%;border-radius: 100px" alt="Error Image Url" >
+                      </div>
                       <ul>
                         <li style="width: 100%;">
                           <label style="font-size: 30px ;">{{job.departmentId}} : {{job.title}}  </label>
@@ -101,21 +103,21 @@
                           <label>Full Name: </label>
                           <input placeholder="Enter Your Name"
                                  type="text"
-                                 v-model="applyResult.candidateName">
+                                 v-model="applyResult.candidateName" required>
                           <i class="careerfy-icon careerfy-user"></i>
                         </li>
                         <li>
                           <label>Email Address:</label>
                           <input placeholder="Enter Your Email Address:"
                                  type="text"
-                                 v-model="applyResult.candidateEmail">
+                                 v-model="applyResult.candidateEmail" required>
                           <i class="careerfy-icon careerfy-mail"></i>
                         </li>
                         <li>
                           <label>Phone Number:</label>
                           <input placeholder="Enter Your Phone Number:"
                                  type="text"
-                                 v-model="applyResult.candidatePhone">
+                                 v-model="applyResult.candidatePhone" required>
                           <i class="careerfy-icon careerfy-technology"></i>
                         </li>
                         <li>
@@ -137,7 +139,7 @@
                           <textarea style="width: 100%;height: 100px;background-color: rgb(153 153 153 / 43%)" v-model="applyResult.messenger">
                           </textarea>
                         </li>
-                        <li class="careerfy-user-form-coltwo-full" @click="showApplyModelOff()">
+                        <li class="careerfy-user-form-coltwo-full">
                           <input type="submit" value="Send">
                         </li>
                       </ul>
@@ -409,14 +411,16 @@ export default {
       }
     },
     async sendJobs() {
-      const uri = 'AppliedJobs'
-      this.applyResult.interviewDate =new Date().toISOString()
-      this.applyResult.candidateCv= document.getElementById('cvPath').value
-      this.applyResult.candidateThumbnail= document.getElementById('avatarurl').value
-      await this.$axios.$post(uri, this.applyResult).then((response) => {
-        this.successAlert='fade-in'
-        this.applyModel = 'fade'
-      })
+        if (this.candidateEmail!==''&&this.candidateName!==''){
+          const uri = 'AppliedJobs'
+          this.applyResult.interviewDate =new Date().toISOString()
+          this.applyResult.candidateCv= document.getElementById('cvPath').value
+          this.applyResult.candidateThumbnail= document.getElementById('avatarurl').value
+          await this.$axios.$post(uri, this.applyResult).then((response) => {
+            this.successAlert='fade-in'
+            this.applyModel = 'fade'
+          })
+        }
     },
     showApplyModel(){
       this.applyModel = 'fade-in'
